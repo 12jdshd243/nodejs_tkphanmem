@@ -1,0 +1,119 @@
+<!-- login.ejs -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        /* Tổng thể trang */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe3e9;
+        }
+
+        /* Form đăng nhập */
+        form {
+            width: 100%;
+            max-width: 400px;
+            padding: 55px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Tiêu đề */
+        h2 {
+            font-size: 26px;
+            color: #ff66a3;
+            margin-bottom: 20px;
+        }
+
+        /* Input và button */
+        form label {
+            display: block;
+            text-align: left;
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="password"],
+        form button {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ffb3c9;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        /* Hiệu ứng focus cho input */
+        form input[type="text"]:focus,
+        form input[type="password"]:focus {
+            border-color: #ff66a3;
+            box-shadow: 0 0 8px rgba(255, 102, 163, 0.4);
+            outline: none;
+        }
+
+        /* Button đăng nhập */
+        form button {
+            background-color: #ff66a3;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 102, 163, 0.4);
+        }
+
+        /* Hiệu ứng hover cho button */
+        form button:hover {
+            background-color: #e0558e;
+            box-shadow: 0 6px 16px rgba(255, 102, 163, 0.6);
+        }
+
+        /* Đoạn văn bản đăng ký */
+        form p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        form p a {
+            color: #ff66a3;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        form p a:hover {
+            color: #e0558e;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/login" method="POST">
+        <h2>Đăng nhập</h2>
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Đăng nhập</button>
+        <p>Chưa có tài khoản? <a href="/register">Đăng ký ngay</a></p>
+    </form>
+
+</body>
+</html>
